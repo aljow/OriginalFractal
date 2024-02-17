@@ -3,11 +3,20 @@ public void setup() {
   frameRate(10);
   background(0);
   noFill();
+  noLoop();
 }
 
 public void draw() {
   //stroke((int)(Math.random()*256)+100,(int)(Math.random()*256)+100,(int)(Math.random()*256)+100);
   fractal(0,0,200);
+}
+
+public void mousePressed() {
+  loop();
+}
+
+public void mouseReleased() {
+  noLoop();
 }
 
 public void fractal(int x, int y, int len) {
